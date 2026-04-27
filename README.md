@@ -46,22 +46,22 @@ order-files [options]
 
 1. **Set a default folder:**
    ```bash
-   python src/order_files/main.py --set-default /path/to/your/folder
+   order-files --set-default "C:\Users\Name\Desktop\TargetFolder"
    ```
 
 2. **Delete the default folder:**
    ```bash
-   python src/order_files/main.py --delete-default
+   order-files --delete-default
    ```
 
 3. **Order files in the default folder starting from 1:**
    ```bash
-   python src/order_files/main.py
+   order-files
    ```
 
 4. **Order files in a specific folder starting from 10:**
    ```bash
-   python src/order_files/main.py -p /path/to/folder -s 10
+   order-files -s 10
    ```
 
 ## Output
