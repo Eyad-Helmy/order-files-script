@@ -32,7 +32,7 @@ def save_default_path(path_string):
         print(f"[!] Error: The path '{path_string}' is not a valid Path")
         sys.exit(1)
     
-    with open(path_string, 'w') as file:
+    with open(CONFIG_FILE, 'w') as file:
         json.dump({"default_path" : path_string}, file)
     print(f"[+] Successfully saved '{path_string}' as the default path.")
 
