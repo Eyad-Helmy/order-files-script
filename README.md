@@ -4,7 +4,7 @@ A Python command-line tool to numerically order files in a folder based on their
 
 ## Description
 
-This tool renames files in a specified folder by prefixing them with a sequential number based on their last modification time. The oldest modified file gets the lowest number. It supports setting a default folder path for convenience and allows customization of the starting number.
+This tool renames files in a directory by prefixing them with a sequential number based on their last modification time (oldest files first). It features a persistent configuration system to remember your "active" folder, saving you from re-typing long Windows paths.
 
 ## Features
 
@@ -16,21 +16,23 @@ This tool renames files in a specified folder by prefixing them with a sequentia
 
 ## Installation
 
-1. Ensure you have Python 3.6+ installed.
-2. Clone or download this repository.
-3. (Optional) Set up a virtual environment:
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
-4. No additional dependencies are required (uses only standard library).
+1. Clone this reposistor:
+```bash
+git clone https://github.com/yourusername/order-files-script.git
+cd order-files-script
+```
+2. Install in "Editable" mode using pip 
+```bash
+pip install -e .
+```
+
 
 ## Usage
 
 Run the script from the command line:
 
 ```bash
-python src/order_files/main.py [options]
+order-files [options]
 ```
 
 ### Options
