@@ -36,6 +36,13 @@ def save_default_path(path_string):
         json.dump({"default_path" : path_string}, file)
     print(f"[+] Successfully saved '{path_string}' as the default path.")
 
+def delete_default_path():
+    if CONFIG_FILE.exists():
+        CONFIG_FILE.unlink()
+        print("[+] Successfully deleted the default path.")
+    else:
+        print("[-] No default path set to delete.")
+
 def main():
     
     parser = argparse.ArgumentParser(description="Order files numerically based on modification date.")
@@ -43,11 +50,16 @@ def main():
     parser.add_argument("-s", "--start", type=int, default=1, help="Number to start the ordering with. The default value is 1")
     parser.add_argument("-p", "--path", type=str, help="Specific folder path to operate on for this run.")
     parser.add_argument("--set-default", type=str, help="Save a folder path as the default for future runs.")
+    parser.add_argument("--delete-default", action="store_true", help="Delete the saved default folder path.")
 
     args = parser.parse_args()
 
     if args.set_default:
         save_default_path(args.set_default)
+        sys.exit(0)
+
+    if args.delete_default:
+        delete_default_path()
         sys.exit(0)
 
     folder_path_string = args.path or load_default_path()   # priority is given to one-time path argument

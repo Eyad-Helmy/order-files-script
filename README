@@ -38,6 +38,7 @@ python src/order_files/main.py [options]
 - `-s, --start <number>`: Number to start the ordering with (default: 1)
 - `-p, --path <path>`: Specific folder path to operate on for this run
 - `--set-default <path>`: Save a folder path as the default for future runs
+- `--delete-default`: Delete the saved default folder path
 
 ### Examples
 
@@ -46,12 +47,17 @@ python src/order_files/main.py [options]
    python src/order_files/main.py --set-default /path/to/your/folder
    ```
 
-2. **Order files in the default folder starting from 1:**
+2. **Delete the default folder:**
+   ```bash
+   python src/order_files/main.py --delete-default
+   ```
+
+3. **Order files in the default folder starting from 1:**
    ```bash
    python src/order_files/main.py
    ```
 
-3. **Order files in a specific folder starting from 10:**
+4. **Order files in a specific folder starting from 10:**
    ```bash
    python src/order_files/main.py -p /path/to/folder -s 10
    ```
