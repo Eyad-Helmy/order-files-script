@@ -1,0 +1,2 @@
+[project.scripts]
+order_files = "order_files.main:main"
