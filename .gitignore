@@ -1,3 +1,5 @@
 original_logic.py
 config.json
 __pycache__/
+*.egg-info/
+.pytest_cache/

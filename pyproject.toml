@@ -1,2 +1,13 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "order-files-script"
+version = "0.1.0"
+authors = [{name = "Eyad"}]
+description = "A dynamic CLI tool for numerical file ordering."
+dependencies = []
+
 [project.scripts]
-order_files = "order_files.main:main"
+order-files = "order_files.main:main"
